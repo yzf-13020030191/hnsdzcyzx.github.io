@@ -1,18 +1,114 @@
-<!doctype html><html><head><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no"/><link rel="shortcut icon" href="./favicon.ico"><script src="https://as.alipayobjects.com/g/component/fastclick/1.0.6/fastclick.js"></script><script>if ('addEventListener' in document) {
-      document.addEventListener('DOMContentLoaded', function() {
-        FastClick.attach(document.body);
-      }, false);
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style></style>
+  <style>
+    html,body {
+      margin: 0;
+      padding: 0;
     }
-    if(!window.Promise) {
-      document.writeln('<script src="https://as.alipayobjects.com/g/component/es6-promise/3.2.2/es6-promise.min.js"'+'>'+'<'+'/'+'script>');
+  .warp {
+    background-color: #ffffff;
+    height: 100vh;
+    font-family: PingFangSC-Medium, PingFang SC;
+    overflow: hidden;
+  }
+.header {
+  background-color: #010101;
+  color: #ffffff;
+  height: 60px;
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 60px;
+}
+.body_header {
+  width: 100%;
+  border-bottom: 1px solid #efefef;
+  padding: 14px 12px;
+}
+.body_header .body_header_title {
+    font-size: 14px;
+    color: #323232;
+  }
+  .body_header .body_header_doc {
+    padding-top: 4px;
+    font-size: 12px;
+    color: #909090;
+  }
+  .body_content {
+  font-weight: 400;
+  font-size: 13px;
+  
+}
+.body_content_item {
+    padding: 14px 12px;
+    padding-left: 0;
+    padding-right: 0;
+    display: flex;
+    margin-left: 12px;
+    border-bottom: 1px solid #efefef;
+    justify-content: space-between;
+    
+  }
+  .left {
+      color: #8e8e8e;
     }
-    function setRem () {
-
-    let htmlWidth = document.documentElement.clientWidth ||document.body.clientWidth;  //检测html的屏幕宽度和body的屏幕宽度
-      document.documentElement.style.fontSize= htmlWidth/23.4375 + 'px'; //设置font-size在750屏幕下的尺寸为100px,这样转换的rem可以一目了然之前是多少px的。开发屏幕尺寸自己选，3.2的320屏幕宽也可以。
+    .right {
+      padding-right: 12px;
+      color: #323232
     }
-
-    setRem();
-    window.onresize = function () {   //浏览器尺寸变化进行触发window.onresize函数，然后触发函数setRem()
-      setRem()
-    }</script><link href="./static/css/main.0bbf8df5.chunk.css" rel="stylesheet"></head><body><div id="root"></div><script>!function(c){function e(e){for(var t,r,n=e[0],o=e[1],a=e[2],u=0,i=[];u<n.length;u++)r=n[u],Object.prototype.hasOwnProperty.call(p,r)&&p[r]&&i.push(p[r][0]),p[r]=0;for(t in o)Object.prototype.hasOwnProperty.call(o,t)&&(c[t]=o[t]);for(h&&h(e);i.length;)i.shift()();return s.push.apply(s,a||[]),l()}function l(){for(var e,t=0;t<s.length;t++){for(var r=s[t],n=!0,o=1;o<r.length;o++){var a=r[o];0!==p[a]&&(n=!1)}n&&(s.splice(t--,1),e=d(d.s=r[0]))}return e}var r={},f={1:0},p={1:0},s=[];function d(e){if(r[e])return r[e].exports;var t=r[e]={i:e,l:!1,exports:{}};return c[e].call(t.exports,t,t.exports,d),t.l=!0,t.exports}d.e=function(s){var e=[];f[s]?e.push(f[s]):0!==f[s]&&{2:1,4:1}[s]&&e.push(f[s]=new Promise(function(e,n){for(var t="static/css/"+({}[s]||s)+"."+{2:"bb080ef5",4:"214d438b",5:"31d6cfe0"}[s]+".chunk.css",o=d.p+t,r=document.getElementsByTagName("link"),a=0;a<r.length;a++){var u=(c=r[a]).getAttribute("data-href")||c.getAttribute("href");if("stylesheet"===c.rel&&(u===t||u===o))return e()}var i=document.getElementsByTagName("style");for(a=0;a<i.length;a++){var c;if((u=(c=i[a]).getAttribute("data-href"))===t||u===o)return e()}var l=document.createElement("link");l.rel="stylesheet",l.type="text/css",l.onload=e,l.onerror=function(e){var t=e&&e.target&&e.target.src||o,r=new Error("Loading CSS chunk "+s+" failed.\n("+t+")");r.code="CSS_CHUNK_LOAD_FAILED",r.request=t,delete f[s],l.parentNode.removeChild(l),n(r)},l.href=o,document.getElementsByTagName("head")[0].appendChild(l)}).then(function(){f[s]=0}));var r=p[s];if(0!==r)if(r)e.push(r[2]);else{var t=new Promise(function(e,t){r=p[s]=[e,t]});e.push(r[2]=t);var n,o=document.createElement("script");o.charset="utf-8",o.timeout=120,d.nc&&o.setAttribute("nonce",d.nc),o.src=d.p+"static/js/"+({}[s]||s)+"."+{2:"3b47f358",4:"1742186c",5:"db9321e1"}[s]+".chunk.js";var a=new Error;n=function(e){o.onerror=o.onload=null,clearTimeout(u);var t=p[s];if(0!==t){if(t){var r=e&&("load"===e.type?"missing":e.type),n=e&&e.target&&e.target.src;a.message="Loading chunk "+s+" failed.\n("+r+": "+n+")",a.name="ChunkLoadError",a.type=r,a.request=n,t[1](a)}p[s]=void 0}};var u=setTimeout(function(){n({type:"timeout",target:o})},12e4);o.onerror=o.onload=n,document.head.appendChild(o)}return Promise.all(e)},d.m=c,d.c=r,d.d=function(e,t,r){d.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:r})},d.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},d.t=function(t,e){if(1&e&&(t=d(t)),8&e)return t;if(4&e&&"object"==typeof t&&t&&t.__esModule)return t;var r=Object.create(null);if(d.r(r),Object.defineProperty(r,"default",{enumerable:!0,value:t}),2&e&&"string"!=typeof t)for(var n in t)d.d(r,n,function(e){return t[e]}.bind(null,n));return r},d.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return d.d(t,"a",t),t},d.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},d.p="./",d.oe=function(e){throw console.error(e),e};var t=this["webpackJsonpreact-app"]=this["webpackJsonpreact-app"]||[],n=t.push.bind(t);t.push=e,t=t.slice();for(var o=0;o<t.length;o++)e(t[o]);var h=n;l()}([])</script><script src="./static/js/3.4fd47db6.chunk.js"></script><script src="./static/js/main.ecd67dd2.chunk.js"></script></body></html>
+  </style>
+</head>
+<body>
+  <div class="warp">
+    <div class='header'>
+      河南省电子证照查验中心
+    </div>
+    <div class='body'>
+      <div class='body_header'>
+        <div class='body_header_title'>
+          建筑施工特种作业操作资格证书
+        </div>
+        <div class='body_header_doc'>
+          河南省住房和城乡建设厅
+        </div>
+      </div>
+      <div class='body_content'>
+        <div class='body_content_item' key={v.title}>
+          <div class='left'>持证者</div>
+          <div class='right'>赵明珍</div>
+        </div>
+        <div class='body_content_item' key={v.title}>
+          <div class='left'>证件号</div>
+          <div class='right'>412924****5123</div>
+        </div>
+        <div class='body_content_item' key={v.title}>
+          <div class='left'>证书编码</div>
+          <div class='right'>豫A032021002230</div>
+        </div>
+        <div class='body_content_item' key={v.title}>
+          <div class='left'>发证日期</div>
+          <div class='right'>2021年02月03日</div>
+        </div>
+        <div class='body_content_item' key={v.title}>
+          <div class='left'>有效日期</div>
+          <div class='right'>2021年02月03日至2023年02月02日</div>
+        </div>
+        <div class='body_content_item' key={v.title}>
+          <div class='left'>操作类别</div>
+          <div class='right'>建筑起重机械司机（施工升降机）</div>
+        </div>
+        <div class='body_content_item' key={v.title}>
+          <div class='left'>电子证照状态</div>
+          <div class='right'>正常有效</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
